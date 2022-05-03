@@ -166,10 +166,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 btn_enviar.addEventListener("click", async (e) => {
     e.preventDefault();
 
-    const usuario_id = document.getElementById("usuario_id").value;
+    const usuario_id = document.getElementById("usuario_id");
     let result;
 
-    if (usuario_id > 0) {
+    if (usuario_id.value > 0) {
         result = await updateUser(form_usuario);
     } else {
         result = await createUser(form_usuario);
@@ -186,6 +186,7 @@ btn_enviar.addEventListener("click", async (e) => {
         });
 
         await getUsers(contenedor_tabla);
+        usuario_id.value = "";
         form_usuario.reset();
     } else {
         Swal.fire({
