@@ -199,3 +199,10 @@ btn_enviar.addEventListener("click", async (e) => {
         });
     }
 });
+
+$("#btn_limpiar").on("click", (e) => {
+    const usuario_id = document.getElementById("usuario_id");
+    e.preventDefault();
+    usuario_id.value = "";
+    form_usuario.reset();
+});

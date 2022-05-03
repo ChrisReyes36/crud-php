@@ -47,6 +47,7 @@
                 </div>
                 <div class="form-group mb-3">
                     <input type="submit" id="btn_enviar" value="Guardar" class="btn btn-primary" />
+                    <button type="submit" id="btn_limpiar" class="btn btn-warning">Limpiar</button>
                 </div>
             </form>
         </div>
